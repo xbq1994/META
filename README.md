@@ -26,7 +26,7 @@ If you want to train with 4-GPU, run:
 ```
 CUDA_VISIBLE_DEVICES=0,1,2,3 python projects/META/train_net.py --config-file projects/META/configs/r50.yml --num-gpus 4
 ```
-You can get the results in our paper by training with 4-GPU, please also modify SOLVER.IMS_PER_BATCH in ```projects/META/configs/Base-cnn.yml``` (64 for 1-GPU and 256 for 4-GPU)
+You can get the results in our paper by training with 4-GPU, please modify SOLVER.IMS_PER_BATCH in ```projects/META/configs/Base-cnn.yml``` (64 for 1-GPU and 256 for 4-GPU)
 
 ### Evaluation
 To evaluate a model's performance, use:
