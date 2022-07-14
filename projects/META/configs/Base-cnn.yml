@@ -64,7 +64,7 @@ SOLVER:
   MAX_EPOCH: 120
   BASE_LR: 0.04
   WEIGHT_DECAY: 0.0005
-  IMS_PER_BATCH: 64 # 64 for 1 gpu; 256 for 4 gpus
+  IMS_PER_BATCH: 64 # Batch size: 64 for 1-GPU; 256 for 4-GPU
   ETA_MIN_LR: 0.00004
 
   FREEZE_ITERS: 500
