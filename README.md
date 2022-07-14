@@ -7,7 +7,7 @@
 ### Datasets
 * Requirements: Market1501, CUHK03, CUHK-SYSU, MSMT17_v2
 
-Please put all the datasets in one directory, and add the path of the directory to DATASETS.PATH in ```projects/META/configs/Base-cnn.yml```
+Please put all the datasets in one directory, and modify DATASETS in ```projects/META/configs/Base-cnn.yml```
 
 ### Installation
 * Please check [fast-reid](http://arxiv.org/abs/2008.08528) for fast-reid installation
@@ -18,18 +18,15 @@ bash cd fastreid/evaluation/rank_cylib; make all
 ```
 
 ### Train
-1. `cd` to folder:
+1. If you want to train with 1-GPU, run:
 ```
- cd projects/Black_reid
-```
-2. If you want to train with 1-GPU, run:
-```
-CUDA_VISIBLE_DEVICES=0 train_net.py --config-file= "configs/HAA_baseline_blackreid.yml"
+python projects/META/train_net.py --config-file projects/META/configs/r50.yml MODEL.DEVICE "cuda:0"
 ```
    if you want to train with 4-GPU, run:
 ```
-CUDA_VISIBLE_DEVICES=0,1,2,3 train_net.py --config-file= "configs/HAA_baseline_blackreid.yml"
+CUDA_VISIBLE_DEVICES=0,1,2,3 python projects/META/train_net.py --config-file projects/META/configs/r50.yml --num-gpus 4
 ```
+You can get the results in our paper by training with 4-GPU, please also modify SOLVER.IMS_PER_BATCH in ```projects/META/configs/Base-cnn.yml``` (64 for 1-GPU and 256 for 4-GPU)
 
 ### Evaluation
 To evaluate a model's performance, use:
