@@ -9,8 +9,8 @@
 Please put all the datasets in one directory, and add the path of the directory to DATASETS.PATH in ```projects/META/configs/Base-cnn.yml```
 
 ### Installation
-*Please see [fast-reid](http://arxiv.org/abs/2008.08528) for fast-reid installation
-*Please see [Apex](https://github.com/NVIDIA/apex) for Apex installation
+* Please see [fast-reid](http://arxiv.org/abs/2008.08528) for fast-reid installation
+* Please see [Apex](https://github.com/NVIDIA/apex) for Apex installation
 
 ### Train
 1. `cd` to folder:
