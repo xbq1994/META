@@ -22,7 +22,7 @@ If you want to train with 1-GPU, run:
 ```
 python projects/META/train_net.py --config-file projects/META/configs/r50.yml MODEL.DEVICE "cuda:0"
 ```
-   if you want to train with 4-GPU, run:
+If you want to train with 4-GPU, run:
 ```
 CUDA_VISIBLE_DEVICES=0,1,2,3 python projects/META/train_net.py --config-file projects/META/configs/r50.yml --num-gpus 4
 ```
