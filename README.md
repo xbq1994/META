@@ -12,7 +12,10 @@ Please put all the datasets in one directory, and add the path of the directory 
 ### Installation
 * Please check [fast-reid](http://arxiv.org/abs/2008.08528) for fast-reid installation
 * Please check [Apex](https://github.com/NVIDIA/apex) for Apex installation
-* Compile with cython to accelerate evalution: ```bash cd fastreid/evaluation/rank_cylib; make all```
+* Compile with cython to accelerate evalution: 
+```
+bash cd fastreid/evaluation/rank_cylib; make all
+```
 
 ### Train
 1. `cd` to folder:
