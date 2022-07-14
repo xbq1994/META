@@ -1,0 +1,11 @@
+_BASE_: Base-cnn.yml
+
+MODEL:
+  BACKBONE:
+    DEPTH: "50x"
+    FEAT_DIM: 2048
+    WITH_IBN: False
+    PRETRAIN: True
+
+
+OUTPUT_DIR: projects/META/logs/r50
