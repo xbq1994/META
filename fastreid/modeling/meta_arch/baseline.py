@@ -150,7 +150,6 @@ class Baseline(nn.Module):
                 n2 = self.affine2_Expert3(n2)                
                 aff = F.softmax(torch.cat((n1,n2),dim=-1),dim=-1)
                 F_final = aff[:,0].unsqueeze(-1).unsqueeze(-1).unsqueeze(-1)*x_Expert2.detach()+aff[:,1].unsqueeze(-1).unsqueeze(-1).unsqueeze(-1)*x_Expert3.detach()
-                #F_final_output = self.heads_F_final(F_final, targets_agg)
                 
                 F_final_output = self.heads_F_final(F_final, targets_agg)
                 losses = self.losses(x_Expert1_output, F_final_output, x_agg_output, targets_agg, targets_expert,iters)
@@ -235,7 +234,7 @@ class Baseline(nn.Module):
             n1 = EMD_Expert2.sum(-1).unsqueeze(-1)    
             n2 = EMD_Expert3.sum(-1).unsqueeze(-1)  
             n3 = EMD_Expert1.sum(-1).unsqueeze(-1)                  
-            #features_final = torch.cat((x_Expert1_output.squeeze(),x_Expert2_output.squeeze(),x_Expert3_output.squeeze(),x_agg_output.squeeze()),dim=-1)
+
             aff = F.softmax(torch.cat((n1,n2,n3),dim=-1),dim=-1)
 
             F_final = aff[:,0].unsqueeze(-1).unsqueeze(-1).unsqueeze(-1)*x_Expert2+aff[:,1].unsqueeze(-1).unsqueeze(-1).unsqueeze(-1)*x_Expert3+aff[:,2].unsqueeze(-1).unsqueeze(-1).unsqueeze(-1)*x_Expert1
@@ -243,7 +242,7 @@ class Baseline(nn.Module):
             
             F_final_output = self.heads_F_finals(F_final)
             features_final = torch.cat((F_final_output.squeeze(),x_agg_output.squeeze()),dim=-1)
-            #features_final = x_agg_output.squeeze()
+
             return features_final
 
     def preprocess_image(self, batched_inputs):
