@@ -10,7 +10,7 @@
 Please put all the datasets in one directory, and modify DATASETS in ```projects/META/configs/Base-cnn.yml```
 
 ### Installation
-* Please check [fast-reid](http://arxiv.org/abs/2008.08528) for fast-reid installation
+* Please check [fast-reid](https://github.com/JDAI-CV/fast-reid/blob/master/INSTALL.md) for fast-reid installation
 * Please check [Apex](https://github.com/NVIDIA/apex) for Apex installation
 * Compile with cython to accelerate evalution: 
 ```
