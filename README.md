@@ -6,7 +6,7 @@
 
 ### Datasets
 * Requirements: Market1501, CUHK03, CUHK-SYSU, MSMT17_v2
-* 
+
 Please put all the datasets in one directory, and add the path of the directory to DATASETS.PATH in ```projects/META/configs/Base-cnn.yml```
 
 ### Installation
