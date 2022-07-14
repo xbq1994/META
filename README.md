@@ -18,7 +18,7 @@ bash cd fastreid/evaluation/rank_cylib; make all
 ```
 
 ### Train
-1. If you want to train with 1-GPU, run:
+If you want to train with 1-GPU, run:
 ```
 python projects/META/train_net.py --config-file projects/META/configs/r50.yml MODEL.DEVICE "cuda:0"
 ```
@@ -31,7 +31,7 @@ You can get the results in our paper by training with 4-GPU, please also modify 
 ### Evaluation
 To evaluate a model's performance, use:
 ```
-CUDA_VISIBLE_DEVICES=0 train_net.py --config-file= "configs/HAA_baseline_blackreid.yml" --eval-only MODEL.WEIGHTS /path/to/checkpoint_file
+python projects/META/train_net.py --config-file projects/META/configs/r50.yml --eval-only MODEL.WEIGHTS /path/to/checkpoint_file MODEL.DEVICE "cuda:0"
 ```
 
 ## Contacts
