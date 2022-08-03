@@ -1,5 +1,5 @@
 # META
-[ECCV 2022] Mimic Embedding via Adaptive Aggregation: Learning Generalizable Person Re-identification [paper](https://arxiv.org/pdf/2112.08684.pdf)
+[ECCV 2022] Mimic Embedding via Adaptive Aggregation: Learning Generalizable Person Re-identification [[paper]](https://arxiv.org/pdf/2112.08684.pdf)
 
 ### Update
 2022-07-14: Update Code. 
