@@ -3,6 +3,7 @@
 
 ### Update
 2022-07-14: Update Code. 
+2022-08-03: Update Paper. 
 
 ### Datasets
 * Requirements: Market1501, CUHK03, CUHK-SYSU, MSMT17_v2
